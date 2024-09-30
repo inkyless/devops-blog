@@ -18,5 +18,5 @@ jobs:
           VALIDATE_JAVASCRIPT_ES: true
           VALIDATE_PYTHON_BLACK: true
           VALIDATE_HTML: true
-          DEFAULT_BRANCH: main
+          DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
