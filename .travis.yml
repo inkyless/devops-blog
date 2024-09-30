@@ -1,25 +1,8 @@
-dist: xenial
-
-language: python
-
-cache: pip
-
-python:
-    - "3.6"
-    - "3.7"
-    - "3.8"
-    - "nightly"
-
-matrix:
-    allow_failures:
-        - python: "nightly"
-
-install:
-    - pip install pipenv --upgrade-strategy=only-if-needed
-    - pipenv install --dev
-
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - "node_modules"
 script:
-    - bash scripts/test.sh
-
-after_script:
-    - bash <(curl -s https://codecov.io/bash)
+  - npm test
